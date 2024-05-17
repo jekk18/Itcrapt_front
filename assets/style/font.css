@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'BPG Glaho WEB';
+    src: url('../fonts/BPGGlahoWEB.woff2') format('woff2'),
+        url('../fonts/BPGGlahoWEB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BPG Glaho WEB Caps';
+    src: url('../fonts/BPGGlahoWEBCaps.woff2') format('woff2'),
+        url('../fonts/BPGGlahoWEBCaps.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
