@@ -1,4 +1,7 @@
  
+  *{
+    box-sizing: border-box;
+ }
  :root{
     --nav-a: 20px;
     --submenu-a: 18px;
@@ -17,14 +20,15 @@
     --project-list-item-title: 24px;
     --project-list-item-text: 20px;
     --tags-list-font: 20px;
+    --vacancies-title: 24px;
+    --vacancies-text: 20px;
  }
  h1, h2, h3, h4 ,h5, h6{
     margin: 0;
     font-weight: 400;
 }
- *{
-    box-sizing: border-box;
- }
+ 
+
  body{
     margin: 0;
     padding: 0;
@@ -110,6 +114,7 @@
     position: absolute;
     transform: scaleY(0);
     background: #fff;
+    z-index: 9;
 }
 .nav-li:hover .submenu{
     transform: scaleY(1);
@@ -418,6 +423,7 @@
     padding-left: 12px;
     line-height: 28px;
     border-left: 1px solid #642E8B;
+    text-decoration: none;
 }
 .footer{
     width: 100%;
@@ -471,7 +477,7 @@
     width: 100%;
 }
 .br-box{
-    width: 92%;
+    width: 91%;
     height: 54px;
     background: #804D9F;
     border-bottom-left-radius: 4px;
@@ -529,7 +535,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%; 
-    padding-right: 11%;
+    padding-right: 9.2%;
 }
 .page-text-box .text{
     margin-top: 24px;
@@ -900,3 +906,385 @@
 .project-detail-fancy-item:hover a img{
     transform: scale(1.05);
 }
+.vacancies-list-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 40px; 
+}
+.vacancies-item{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 34px;
+    border-radius: 4px;
+    background: #F9F9F9;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.vacancies-item:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.vacancy-left{
+    width: 75%;
+    display: flex;
+    flex-direction: column; 
+}
+.vacancy-left h2{
+    font-size: var(--vacancies-title);
+    color: #3A3A3A;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    line-height: 34px;
+    margin-bottom: 10px;
+    font-family: 'BPG Glaho WEB Caps';
+}
+.vacancy-text{
+    font-size: var(--vacancies-text);
+    color: #5C5C5C;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 34px;
+    margin-bottom: 20px;
+    font-family: 'BPG Glaho WEB';
+}
+.vacancy-right{
+    width: 25%;
+    padding-left: 65px;
+}
+.status, .saerch-section-type{
+    color: #C1C1C1;
+    padding-left: 28px;
+    width: 100%;
+    position: relative;
+    font-family: 'BPG Glaho WEB';
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 15px;
+}
+.status::after, .saerch-section-type::after{
+    position: absolute;
+    content: "";
+    background: #C1C1C1;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 11px;
+    left: 0;
+}
+.date-range{
+    width: 100% ;
+    margin-top: 45px;
+    color: #804D9F;
+    font-family: 'BPG Glaho WEB';
+    font-size: 20px;
+}
+.active-status, .saerch-section-type{
+    color: #804D9F;
+}
+.active-status::after, .saerch-section-type::after{
+    background-color: #804D9F;
+}
+.completed-status{
+    color: #5C5C5C;
+}
+.completed-status::after{
+    background-color: #5C5C5C;
+}
+.vacancy-detail-status-block{
+    margin-top: 30px;
+    width: 100%;
+}
+.vacancy-detail-status-block .date-range{
+    margin-top: 30px;
+}
+.partners-list-box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 24px;
+    margin-top: 50px;
+}
+.partners-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((100% / 4) - 18px);
+    height: 190px;
+    background: #F9F9F9;
+    transition: 0.2s;
+}
+.partners-item img{
+    max-width: 95%;
+    max-height: 95%;
+}
+.partners-item:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.search-form{
+    width: 100%;
+    margin-top: 60px;
+}
+.search-form form{
+    position: relative;
+    width: 100%;
+    height: 55px;
+    border-bottom: 1px solid #804D9F; 
+}
+.search-form form input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    appearance: none;
+    outline: none;
+    background: none;
+    padding-right: 40px; 
+    color: #3A3A3A;
+    font-family: 'BPG Glaho WEB Caps';
+    font-size: 30px; 
+}
+.search-form form input::placeholder{
+    font-size: 30px;
+    color: #3A3A3A;
+    font-family: 'BPG Glaho WEB Caps';
+    opacity: 0.5;
+}
+.search-button{
+    position: absolute;
+    right: 0;
+    height:55px;
+    background: transparent;
+    cursor: pointer;
+    z-index: 8;
+    border: none;
+    outline: none;
+    appearance: none;
+}
+.results-count{
+    margin-top: 16px;
+    font-size: 20px;
+    color: #989898;
+    font-family: 'BPG Glaho WEB'; 
+}
+
+.search-results{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 80px;
+}
+.search-item-res{
+    width: 100%;
+}
+.contact-box{
+    margin-top: 20px;
+    width: 100%;
+}
+.contact-company{
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.contact-company ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;  
+}
+.contact-company ul li{
+    list-style: none;
+    font-size: 20px;
+    color: #804D9F;
+    font-family: 'BPG Glaho WEB Caps';
+    line-height: 34px;
+}
+.contact-company ul li a{
+    margin-left: 16px;
+    line-height: 34px;
+    font-family: 'BPG Glaho WEB'; 
+    color: #393939; 
+    text-decoration: none;
+    transition: 0.2s;
+}
+.contact-company ul li a:hover{
+    text-decoration: underline;
+}
+.map{
+    margin-top: 70px;
+    width: 100%;
+    height: 330px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+.contact-form{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.contact-form form{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 24px;
+}
+.left-form, .right-form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: calc((100% / 2) - 12px);
+}
+.input-b, .textarea-b{
+    width: 100%;
+    height: 70px;
+    border: none;
+    appearance: none;
+    outline: none;
+    border-radius: 4px;
+    background: #F9F9F9;
+    padding: 0 24px;
+    font-size: 20px;
+    color: #393939;
+    font-family: 'BPG Glaho WEB'; 
+    line-height: 34px;
+}
+.input-b::placeholder{
+    font-size: 20px;
+    color: #989898;
+    font-family: 'BPG Glaho WEB'; 
+}
+.textarea-b{
+    height: 167px;
+    resize: none;
+    padding-top: 18px;
+}
+.contact-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 11px;
+}
+.cont-btn{
+    padding: 10px 57px;
+    background: #804D9F;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'BPG Glaho WEB'; 
+    line-height: 34px;
+    font-size: 20px;
+    transition: 0.2s;
+}
+.cont-btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.blog-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.blog-tags{
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px 40px; 
+}
+.blog-link-all, .blog-tags ul li a{
+    color: #804D9F;
+    font-family: 'BPG Glaho WEB'; 
+    line-height: 34px;
+    font-size: 20px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+.blog-tags ul li a:hover, .active-tag, .blog-tags ul li a.active-tag{
+    color: #393939;
+}
+.blog-tags ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.blog-tags ul li{
+    list-style: none;
+}
+ .blog-list-box{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 24px;
+ }
+ .blog-list-item{
+    width: calc((100% / 3) - 16px);
+    height: 546px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #F9F9F9; 
+    transition: 0.2s;
+    text-decoration: none;
+ }
+ .blog-list-item:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ }
+ .blog-list-item img{
+    width: 100%;
+    height: 272px;
+    object-fit: cover;
+ }
+ .blog-bottom-text{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+   margin-top: 24px;
+   padding: 0 40px;
+ }
+ .blog-ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 24px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-height: 75px;
+ }
+ .blog-ul li{
+    list-style: none;
+    color: #804D9F;
+    font-family: 'BPG Glaho WEB'; 
+    line-height: 34px;
+    font-size: 20px;
+    word-break: break-all;
+ }
+ .blog-bottom-text .text{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 34px; 
+    font-family: 'BPG Glaho WEB';
+    color: #3A3A3A;
+    font-family: 'BPG Glaho WEB Caps';
+    font-size: 24px;
+ }
