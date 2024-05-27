@@ -484,7 +484,7 @@
 }
 .br-box{
     width: 91%;
-    height: 54px;
+    padding: 13px 0;
     background: #804D9F;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -962,6 +962,7 @@
 .vacancy-right{
     width: 25%;
     padding-left: 65px;
+    overflow: hidden;
 }
 .status, .saerch-section-type{
     color: #C1C1C1;
